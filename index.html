@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake Game - BY ANSHU</title>
+    <style>
+        body { background: #1a1a1a; display: flex; flex-direction: column; align-items: center; color: white; font-family: Arial; }
+        canvas { background: black; border: 5px solid #2e7d32; box-shadow: 0 0 20px green; margin-top: 20px; }
+        .controls { display: grid; grid-template-columns: repeat(3, 80px); gap: 10px; margin-top: 20px; }
+        button { 
+            background: #1b5e20; border: none; color: white; padding: 20px; border-radius: 10px; 
+            font-size: 25px; cursor: pointer; box-shadow: 0 4px #003300;
+        }
+        button:active { box-shadow: 0 1px #003300; transform: translateY(4px); }
+        .up { grid-column: 2; }
+        .left { grid-column: 1; }
+        .down { grid-column: 2; }
+        .right { grid-column: 3; }
+    </style>
+</head>
+<body>
+    <h1>SNAKE GAME</h1>
+    <canvas id="snakeGame" width="400" height="400"></canvas>
+    
+    <div class="controls">
+        <button class="up" onclick="setDir(0, -1)">⬆</button>
+        <button class="left" onclick="setDir(-1, 0)">⬅</button>
+        <button class="down" onclick="setDir(0, 1)">⬇</button>
+        <button class="right" onclick="setDir(1, 0)">➡</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
